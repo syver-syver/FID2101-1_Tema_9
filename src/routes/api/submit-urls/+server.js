@@ -1,12 +1,12 @@
-import { json } from '@sveltejs/kit';
-
-const API_KEY = '266ebca40a5f45318ce8508a623c9559';
+// src/api/cron/indexnow.js
+const API_KEY = process.env.INDEXNOW_API_KEY;
 const SITE_URL = 'https://syver.vercel.app';
 
-export async function GET(event) {
-  const authHeader = event.request.headers.get('authorization');
-  if (authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
-    return new Response('Unauthorized', { status: 401 });
+export default async function handler(request, response) {
+  // Verify the request is from Vercel
+  const authHeader = request.headers.get('authorization');
+  if (!process.env.CRON_SECRET || authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
+    return response.status(401).json({ success: false });
   }
 
   const urls = [
@@ -25,7 +25,7 @@ export async function GET(event) {
   const indexNowUrl = `https://api.indexnow.org/indexnow?url=${encodeURIComponent(SITE_URL)}&key=${API_KEY}`;
 
   try {
-    const response = await fetch(indexNowUrl, {
+    const indexNowResponse = await fetch(indexNowUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -33,13 +33,13 @@ export async function GET(event) {
       body: JSON.stringify({ urls: fullUrls })
     });
 
-    if (!response.ok) {
+    if (!indexNowResponse.ok) {
       throw new Error('Failed to submit URLs');
     }
 
-    return json({ success: true, message: 'URLs submitted successfully' });
+    return response.status(200).json({ success: true, message: 'URLs submitted successfully' });
   } catch (error) {
     console.error('Error submitting URLs:', error);
-    return json({ success: false, message: error.message }, { status: 500 });
+    return response.status(500).json({ success: false, message: error.message });
   }
 }
