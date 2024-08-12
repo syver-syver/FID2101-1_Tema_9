@@ -27,10 +27,18 @@ export async function GET({ request }) {
 
   const fullUrls = urls.map(url => `${SITE_URL}${url}`);
 
-  const indexNowUrl = `https://api.indexnow.org/indexnow?url=${encodeURIComponent(SITE_URL)}&key=${API_KEY}`;
+  const indexNowUrl = `https://api.indexnow.org/indexnow`;
 
   console.log('Preparing to submit URLs:', fullUrls);
   console.log('IndexNow URL:', indexNowUrl);
+
+  const requestBody = {
+    host: SITE_URL,
+    key: API_KEY,
+    urlList: fullUrls
+  };
+
+  console.log('Request body:', JSON.stringify(requestBody));
 
   try {
     const indexNowResponse = await fetch(indexNowUrl, {
@@ -38,7 +46,7 @@ export async function GET({ request }) {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ urls: fullUrls })
+      body: JSON.stringify(requestBody)
     });
 
     console.log('IndexNow response status:', indexNowResponse.status);
