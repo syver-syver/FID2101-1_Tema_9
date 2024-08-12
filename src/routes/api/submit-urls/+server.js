@@ -1,12 +1,14 @@
-// src/api/cron/indexnow.js
+// src/routes/api/cron/indexnow/+server.js
+import { json } from '@sveltejs/kit';
+
 const API_KEY = process.env.INDEXNOW_API_KEY;
 const SITE_URL = 'https://syver.vercel.app';
 
-export default async function handler(request, response) {
+export async function GET({ request }) {
   // Verify the request is from Vercel
   const authHeader = request.headers.get('authorization');
   if (!process.env.CRON_SECRET || authHeader !== `Bearer ${process.env.CRON_SECRET}`) {
-    return response.status(401).json({ success: false });
+    return new Response(JSON.stringify({ success: false }), { status: 401 });
   }
 
   const urls = [
@@ -37,9 +39,9 @@ export default async function handler(request, response) {
       throw new Error('Failed to submit URLs');
     }
 
-    return response.status(200).json({ success: true, message: 'URLs submitted successfully' });
+    return json({ success: true, message: 'URLs submitted successfully' });
   } catch (error) {
     console.error('Error submitting URLs:', error);
-    return response.status(500).json({ success: false, message: error.message });
+    return json({ success: false, message: error.message }, { status: 500 });
   }
 }
