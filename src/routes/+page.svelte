@@ -81,70 +81,70 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "ProfilePage",
-      "mainEntity": {
-        "@type": "Person",
-        "name": "Syver Giswold",
-        "jobTitle": "Interaksjonsdesigner",
-        "description": "Se Syver Giswolds portefølje - en talentfull UX/UI designer & frontend-utvikler. Utforsk innovative designløsninger og ta kontakt for ditt neste prosjekt!",
-        "url": "https://syver.vercel.app/",
-        "image": "https://syver.vercel.app/assets/Syver_Giswold_link_preview.webp",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Sande i Vestfold",
-          "addressCountry": "Norge"
-        },
-        "telephone": "+4797104751",
-        "email": "SyverGiswold@gmail.com",
-        "sameAs": [
-          "https://github.com/SyverGiswold",
-          "https://www.linkedin.com/in/syver-giswold/"
-        ],
-        "worksFor": {
-          "@type": "Organization",
-          "name": "Freelance"
-        },
-        "knowsAbout": [
-          "UX Design",
-          "UI Design",
-          "Frontend Development",
-          "Figma",
-          "Webflow",
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "Photoshop",
-          "Illustrator",
-          "Indesign",
-          "After Effects",
-          "Premiere Pro"
-        ],
-        "makesOffer": {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Interaksjonsdesign og Frontend-utvikling",
-            "description": "Brukergrensesnitt design, brukeropplevelse design, og frontend-utvikling tjenester"
-          }
-        }
+      "@type": ["Person", "ProfilePage"],
+      "name": "Syver Giswold",
+      "jobTitle": "Interaksjonsdesigner",
+      "description": "Se Syver Giswolds portefølje - en talentfull UX/UI designer & frontend-utvikler. Utforsk innovative designløsninger og ta kontakt for ditt neste prosjekt!",
+      "url": "https://syver.vercel.app/",
+      "image": "https://syver.vercel.app/assets/Syver_Giswold_link_preview.webp",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Sande i Vestfold",
+        "addressCountry": "Norge"
       },
-      "hasPart": [
-        {
-          "@type": "CreativeWork",
-          "name": "Tekst app",
-          "description": "En rich text editor tilsvarende til TinyMCE og CKEditor som skulle være brukbare med kun tastatur"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Handleliste app",
-          "description": "En handle liste applikasjon utviklet i javascript"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Universell utforming rapport",
-          "description": "Rapport om universell utforming og brukervennlighet på Ygg & Lyng sin nettside"
-        }
-      ]
+      "telephone": "+4797104751",
+      "email": "SyverGiswold@gmail.com",
+      "sameAs": [
+        "https://github.com/SyverGiswold",
+        "https://www.linkedin.com/in/syver-giswold/"
+      ],
+      "knowsAbout": [
+        "UX Design",
+        "UI Design",
+        "Frontend Development",
+        "Figma",
+        "Webflow",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Photoshop",
+        "Illustrator",
+        "Indesign",
+        "After Effects",
+        "Premiere Pro"
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Interaksjonsdesigner & Frontend-utvikler",
+        "skills": [
+          "UX/UI Design",
+          "Frontend Development",
+          "Interaction Design"
+        ]
+      },
+      "portfolio": {
+        "@type": "Collection",
+        "hasPart": [
+          {
+            "@type": "CreativeWork",
+            "name": "Tekst app",
+            "description": "En rich text editor tilsvarende til TinyMCE og CKEditor som skulle være brukbare med kun tastatur",
+            "timeRequired": "P6W"
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Handleliste app",
+            "description": "En handle liste applikasjon utviklet i javascript",
+            "timeRequired": "P6W"
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Universell utforming rapport",
+            "description": "Rapport om universell utforming og brukervennlighet på Ygg & Lyng sin nettside",
+            "timeRequired": "P3W"
+          }
+        ]
+      }
     }
     </script>
 </svelte:head>
