@@ -81,50 +81,41 @@
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": ["Person", "ProfilePage"],
-      "name": "Syver Giswold",
-      "jobTitle": "Interaksjonsdesigner",
-      "description": "Se Syver Giswolds portefølje - en talentfull UX/UI designer & frontend-utvikler. Utforsk innovative designløsninger og ta kontakt for ditt neste prosjekt!",
-      "url": "https://syver.vercel.app/",
-      "image": "https://syver.vercel.app/assets/Syver_Giswold_link_preview.webp",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Sande i Vestfold",
-        "addressCountry": "Norge"
-      },
-      "telephone": "+4797104751",
-      "email": "SyverGiswold@gmail.com",
-      "sameAs": [
-        "https://github.com/SyverGiswold",
-        "https://www.linkedin.com/in/syver-giswold/"
-      ],
-      "knowsAbout": [
-        "UX Design",
-        "UI Design",
-        "Frontend Development",
-        "Figma",
-        "Webflow",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Photoshop",
-        "Illustrator",
-        "Indesign",
-        "After Effects",
-        "Premiere Pro"
-      ],
-      "hasOccupation": {
-        "@type": "Occupation",
-        "name": "Interaksjonsdesigner & Frontend-utvikler",
-        "skills": [
-          "UX/UI Design",
+      "@type": "ProfilePage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Syver Giswold",
+        "jobTitle": "Interaksjonsdesigner",
+        "description": "Se Syver Giswolds portefølje - en talentfull UX/UI designer & frontend-utvikler. Utforsk innovative designløsninger og ta kontakt for ditt neste prosjekt!",
+        "url": "https://syver.vercel.app/",
+        "image": "https://syver.vercel.app/assets/Syver_Giswold_link_preview.webp",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sande i Vestfold",
+          "addressCountry": "Norge"
+        },
+        "telephone": "+4797104751",
+        "email": "SyverGiswold@gmail.com",
+        "sameAs": [
+          "https://github.com/SyverGiswold",
+          "https://www.linkedin.com/in/syver-giswold/"
+        ],
+        "knowsAbout": [
+          "UX Design",
+          "UI Design",
           "Frontend Development",
-          "Interaction Design"
-        ]
-      },
-      "portfolio": {
-        "@type": "Collection",
-        "hasPart": [
+          "Figma",
+          "Webflow",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Photoshop",
+          "Illustrator",
+          "Indesign",
+          "After Effects",
+          "Premiere Pro"
+        ],
+        "workExample": [
           {
             "@type": "CreativeWork",
             "name": "Tekst app",
