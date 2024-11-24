@@ -77,6 +77,67 @@
   />
 
   <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Syver Giswold",
+        "jobTitle": "Interaction Designer",
+        "description": "See Syver Giswold's portfolio - a talented UX/UI designer & frontend developer. Explore innovative design solutions and get in touch for your next project!",
+        "url": "https://syver.vercel.app/en",
+        "image": "https://syver.vercel.app/assets/Syver_Giswold_link_preview.webp",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Sande in Vestfold",
+          "addressCountry": "Norway"
+        },
+        "telephone": "+4797104751",
+        "email": "SyverGiswold@gmail.com",
+        "sameAs": [
+          "https://github.com/SyverGiswold",
+          "https://www.linkedin.com/in/syver-giswold/"
+        ],
+        "knowsAbout": [
+          "UX Design",
+          "UI Design",
+          "Frontend Development",
+          "Figma",
+          "Webflow",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Photoshop",
+          "Illustrator",
+          "Indesign",
+          "After Effects",
+          "Premiere Pro"
+        ],
+        "workExample": [
+          {
+            "@type": "CreativeWork",
+            "name": "Text Editor App",
+            "description": "A rich text editor similar to TinyMCE and CKEditor that was designed to be fully keyboard accessible",
+            "timeRequired": "P6W"
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Shopping List App",
+            "description": "A shopping list application developed in JavaScript",
+            "timeRequired": "P6W"
+          },
+          {
+            "@type": "CreativeWork",
+            "name": "Universal Design Report",
+            "description": "Report on universal design and user experience on the Ygg & Lyng website",
+            "timeRequired": "P3W"
+          }
+        ]
+      }
+    }
+    </script>
 </svelte:head>
 
 <Header />
